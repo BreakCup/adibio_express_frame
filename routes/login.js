@@ -5,7 +5,8 @@ login.get('/', function(req, res) {
   res.render('login', { title: 'Express' });
 });
 login.post('/',function(req,res){
-	conselo.log("get post:\n");
-	conselo.log(req,res);
+	//处理登录密码名字
+	console.log("get post:\n");
+	console.log(req,res);
 });
 module.exports = login;
