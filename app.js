@@ -21,6 +21,13 @@ app.use(bodyParser.urlencoded());
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+//记录信息
+app.use(function(req,res,next){
+    console.log("reques at:",Date());
+    console("ip:",req.connection.remoteAddress);
+    next();
+});
+
 
 router(app);
 
@@ -56,10 +63,5 @@ app.use(function(err, req, res, next) {
     });
 });
 
-app.use(function(req,res,next){
-    console.log("reques at:",Date());
-    console("ip:",req.connection.remoteAddress);
-
-});
 
 module.exports = app;
