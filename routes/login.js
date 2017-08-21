@@ -7,6 +7,6 @@ login.get('/', function(req, res) {
 login.post('/',function(req,res){
 	//处理登录密码名字
 	console.log("get post:\n");
-	console.log(req,res);
+	
 });
 module.exports = login;
