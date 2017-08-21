@@ -21,6 +21,7 @@ app.use(bodyParser.urlencoded());
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+
 router(app);
 
 /// catch 404 and forwarding to error handler
